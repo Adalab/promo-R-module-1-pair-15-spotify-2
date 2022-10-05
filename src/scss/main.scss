@@ -209,9 +209,15 @@
     .hamb{
       display: none;
     }
+
     .nav{
       display: block;
     }
+    .menu {
+      display: flex;
+      list-style: none;
+    }
+
     .hero-title {
       margin-top: 100px;
     }
