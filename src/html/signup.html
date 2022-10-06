@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registro</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/images/logo-black.svg" alt="logo Spotify">
+    </header>
+    <main>
+        <form action="">
+            <fieldset>
+                <h1>Regístrate gratis para escuchar.</h1>
+            
+                <div>
+                    <input type="submit"  value="Resgistrate con Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div>
+                    <input type="submit"  value="Resgistrate con Google">
+                    <i class="fa-brands fa-google"></i>
+                </div>
+            </fieldset>
+        </form>
+        <form action="https://adalab-server-form.herokuapp.com/">
+            <fieldset>
+                <legend>Registrarte con tu correo electrónico</legend>
+                <label for="email">¿Cuál es tu correo electrónico?</label>
+                <input type="email" id="email" placeholder="Pon tu correo electrónico.">
+                <label for="email-confirm">Confirma el correo electrónico</label>
+                <input type="email" id="email-confirm" placeholder="Vuelve a poner tu correo electrónico.">
+                <label for="pass">Crea una contraseña</label>
+                <input type="password" id="pass" placeholder="Crea una contraseña">
+                <label for="name">¿Cómo quieres que te llamemos?</label>
+                <input type="text" id="name" placeholder="Pon un nombre de perfil.">
+                <p>Esto aparece en tu perfil.</p>
+                <label for="birthday">¿Cuál es tu fecha de nacimiento?</label>
+                <label for="day">Día</label>
+                <input type="number"  id="day" placeholder="DD" min="1" max="31" maxlength="2">
+                <label for="month">Mes</label>
+                <input type="select" id="month" placeholder="mes" step="1">
+                <label for="">Año</label>
+                <input type="number" id="year" placeholder="AAAA" min="1900" max="2022" maxlength="4">
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
