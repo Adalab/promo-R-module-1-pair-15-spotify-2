@@ -1,52 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/signup.css" />
     <title>Registro</title>
-</head>
-<body>
-    <header>
-        <img src="./assets/images/logo-black.svg" alt="logo Spotify">
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header__img"
+        src="./assets/images/logo-black.svg"
+        alt="logo Spotify"
+      />
     </header>
     <main>
-        <form action="">
-            <fieldset>
-                <h1>Regístrate gratis para escuchar.</h1>
-            
-                <div>
-                    <input type="submit"  value="Resgistrate con Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </div>
-                <div>
-                    <input type="submit"  value="Resgistrate con Google">
-                    <i class="fa-brands fa-google"></i>
-                </div>
-            </fieldset>
-        </form>
-        <form action="https://adalab-server-form.herokuapp.com/">
-            <fieldset>
-                <legend>Registrarte con tu correo electrónico</legend>
-                <label for="email">¿Cuál es tu correo electrónico?</label>
-                <input type="email" id="email" placeholder="Pon tu correo electrónico.">
-                <label for="email-confirm">Confirma el correo electrónico</label>
-                <input type="email" id="email-confirm" placeholder="Vuelve a poner tu correo electrónico.">
-                <label for="pass">Crea una contraseña</label>
-                <input type="password" id="pass" placeholder="Crea una contraseña">
-                <label for="name">¿Cómo quieres que te llamemos?</label>
-                <input type="text" id="name" placeholder="Pon un nombre de perfil.">
-                <p>Esto aparece en tu perfil.</p>
-                <label for="birthday">¿Cuál es tu fecha de nacimiento?</label>
-                <label for="day">Día</label>
-                <input type="number"  id="day" placeholder="DD" min="1" max="31" maxlength="2">
-                <label for="month">Mes</label>
-                <input type="select" id="month" placeholder="mes" step="1">
-                <label for="">Año</label>
-                <input type="number" id="year" placeholder="AAAA" min="1900" max="2022" maxlength="4">
-            </fieldset>
-        </form>
+      <form class="form" action="">
+        <fieldset class="form__fieldset">
+          <h1 class="form__h1">Regístrate gratis para escuchar.</h1>
+
+          <div class="form__facebook">
+            <input
+              class="form__facebook--input"
+              type="submit"
+              value="Registrate con Facebook"
+            />
+            <i class="fa-brands fa-facebook form__facebook--icon"></i>
+          </div>
+          <div class="form__google">
+            <input type="submit" value="Registrate con Google" />
+            <i class="fa-brands fa-google icon"></i>
+          </div>
+        </fieldset>
+      </form>
+      <form class="form" action="https://adalab-server-form.herokuapp.com/">
+        <fieldset class="form__fieldset">
+          <legend>Registrarte con tu correo electrónico</legend>
+          <label for="email">¿Cuál es tu correo electrónico?</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Pon tu correo electrónico."
+          />
+          <label for="email-confirm">Confirma el correo electrónico</label>
+          <input
+            type="email"
+            id="email-confirm"
+            name="email-confirm"
+            placeholder="Vuelve a poner tu correo electrónico."
+          />
+          <label for="pass">Crea una contraseña</label>
+          <input type="password" id="pass" placeholder="Crea una contraseña" />
+          <label for="name">¿Cómo quieres que te llamemos?</label>
+          <input type="text" id="name" placeholder="Pon un nombre de perfil." />
+          <p>Esto aparece en tu perfil.</p>
+          <label for="birthday">¿Cuál es tu fecha de nacimiento?</label>
+          <label for="day">Día</label>
+          <input
+            type="number"
+            id="day"
+            name="day"
+            placeholder="DD"
+            min="1"
+            max="31"
+            maxlength="2"
+          />
+          <label for="month">Mes</label>
+          <select id="month" name="month">
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
+            <option value="Mayo">Mayo</option>
+            <option value="Junio">Junio</option>
+            <option value="Julio">Julio</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Septiembre">Septiembre</option>
+            <option value="Octubre">Octubre</option>
+            <option value="Noviembre">Noviembre</option>
+            <option value="Diciembre">Diciembre</option>
+          </select>
+          <label for="">Año</label>
+          <input
+            type="number"
+            id="year"
+            name="year"
+            placeholder="AAAA"
+            min="1900"
+            max="2022"
+            maxlength="4"
+          />
+          <h3>¿Cuál es tu género?</h3>
+          <div class="gender1">
+            <label for="gender1">
+              <input type="radio" id="gender1" name="gender" value="Hombre" />
+              Hombre
+            </label>
+          </div>
+          <div class="gender2">
+            <label for="gender2">
+              <input type="radio" id="gender2" name="gender" value="Mujer" />
+              Mujer
+            </label>
+          </div>
+          <div class="gender3">
+            <label for="gender3">
+              <input
+                type="radio"
+                id="gender3"
+                name="gender"
+                value="No binario"
+              />
+              No binario
+            </label>
+          </div>
+          <div class="newsletter">
+            <label for="newsletter">
+              <input
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+                value="suscribenewsletter"
+              />
+              Quiero que me enviéis novedades y ofertas de Spotify
+            </label>
+          </div>
+          <div class="marketing">
+            <label for="marketing">
+              <input
+                type="checkbox"
+                id="marketing"
+                name="marketing"
+                value="sharedatamarketing"
+              />
+              Compartir mis datos de registro con los proveedores de contenidos
+              de Spotify para fines de marketing. Ten en cuenta que tus datos
+              pueden ser transferidos a un país de fuera del EEE, tal y como se
+              recoge en nuestra Política de Privacidad.
+            </label>
+          </div>
+          <input type="submit" value="Registrarte" />
+          <p>¿Ya tienes cuenta? <a href="#">Inicia sesión</a>.</p>
+        </fieldset>
+      </form>
     </main>
-</body>
+  </body>
 </html>

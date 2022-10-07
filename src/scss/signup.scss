@@ -1,0 +1,37 @@
+@import 'core/variables';
+*{
+    font-family: $font;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    &__img{
+        height: 50px;
+        width: 100px;
+    }
+}
+
+.form{
+    /*appearance: none;*/
+    &__fieldset{
+        border: none;
+    }
+    &__h1{
+        font-size: 18px;
+        font-weight: bolder;
+    }
+    &__facebook{
+        position: relative;
+        &--input{
+            background-color: $colorFacebook;
+        }
+        &--icon{
+            position: absolute;
+            left: 5px;
+            top: 2px;
+        }
+        
+        
+    }
+}
